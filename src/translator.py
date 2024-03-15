@@ -32,5 +32,6 @@ class AmadeusTranslator:
 
         # post-process the response
         response = response.json()
-        return response[0][0][0]
+        
+        return ''.join(txt[0] for txt in response[0])
 

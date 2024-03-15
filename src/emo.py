@@ -10,7 +10,7 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 class AmadeusEmo:
     
     emotions=[
-        "Sleep","Interest","Sad","Very Default","Wink","Serious","Disappoint","Tired","Fun","Angry","Embarassed","Very Not Interest","Default","Very Embarassed","Calm","Very Serious","Surprise","Not Interest","Closed Sleep","Back"
+        "Sleep","Interest","Sad","Very Default","Wink","Serious","Disappoint","Tired","Fun","Angry","Embarassed","Very Disinterest","Default","Very Embarassed","Calm","Very Serious","Surprise","Disinterest","Closed Sleep","Back"
     ]
 
     def __init__(self):

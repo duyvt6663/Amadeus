@@ -16,7 +16,7 @@ class AmadeusSprite:
         self.emo = AmadeusEmo()
         self.base_path = os.path.dirname(os.path.abspath(__file__))[:-4]
         self.data_path = os.path.join(self.base_path, os.getenv("DATA_PATH"))
-        self.asset_path = "asset/sprite.gif"
+        self.save_path = "asset/sprite.gif"
 
         # initialize class of sprites
         self.DEF = {"D":"D_40000", "E":"E_40000", "F":"F_00000"}
@@ -30,15 +30,20 @@ class AmadeusSprite:
     def make_sprite(self, emotion, distance="Medium", duration=200):
         sprite_imgs = self._get_sprite(emotion, distance)
 
-        sprite_imgs *= 3
-        random.shuffle(sprite_imgs)
+        single_sprite_duration = 150 # this is a hyperparam
+        duration += single_sprite_duration # add one more sprite
+        multiplier = max(1, duration // (single_sprite_duration * len(sprite_imgs)))
+        sprite_imgs *= multiplier
+        sprite_imgs.append(sprite_imgs[0])
+        # random.shuffle(sprite_imgs)
+        
         sprite_imgs[0].save(
-                self.asset_path, 
+                self.save_path, 
                 save_all=True, 
                 append_images=sprite_imgs[1:], 
                 optimize=False, 
-                duration=duration, 
-                loop=0
+                duration=single_sprite_duration, 
+                # loop=0
             )
 
     def _get_sprite_class(self, emotion, distance="Medium"):

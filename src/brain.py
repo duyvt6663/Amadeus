@@ -68,7 +68,7 @@ class AmadeusBrain:
 
         return emo, ans
     
-    # @timeit
+    @timeit
     def _process_via_cai(self, text):
         """
         process the text via CAI

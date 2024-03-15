@@ -49,7 +49,7 @@ kurisu_normal_prompt = [
 ]
 
 emo_prompt = [
-    "I have a list of sample emotions [\"Sleep\",\"Interest\",\"Sad\",\"Very Default\",\"Wink\",\"Serious\",\"Disappoint\",\"Tired\",\"Fun\",\"Angry\",\"Embarassed\",\"Very Not Interest\",\"Default\",\"Very Embarassed\",\"Calm\",\"Very Serious\",\"Surprise\",\"Not Interest\",\"Closed Sleep\",\"Back\"]. You should predict the emotion corresponding to each input text.",
+    "I have a list of sample emotions [\"Sleep\",\"Interest\",\"Sad\",\"Very Default\",\"Wink\",\"Serious\",\"Disappoint\",\"Tired\",\"Fun\",\"Angry\",\"Embarassed\",\"Very Disinterest\",\"Default\",\"Very Embarassed\",\"Calm\",\"Very Serious\",\"Surprise\",\"Disinterest\",\"Closed Sleep\",\"Back\"]. You should predict the emotion corresponding to each input text.",
     "input: W-What is it?",
     "output: [Embarassed]",
     "input: Goodbye!",
